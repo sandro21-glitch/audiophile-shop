@@ -6,6 +6,7 @@
 :root {
   --clr-grey-1: #102a42;
   --clr-white: #fff;
+  --max-width: 72.375rem;
 }
 body {
   background: var(--clr-white);
@@ -80,7 +81,6 @@ p {
 }
 
 .section-center {
-  width: 90vw;
-  max-width: 1170px;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
