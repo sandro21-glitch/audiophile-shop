@@ -1,9 +1,15 @@
-
+import HeroPage from "../features/home/HeroPage";
+import Products from "../features/home/Products";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <section>
+      <HeroPage />
+      <div className="section-center">
+        <Products />
+      </div>
+    </section>
+  );
+};
 
-export default Home
+export default Home;
