@@ -10,6 +10,12 @@ export default {
         textLight: "rgba(255,255,255,0.5)",
         "text-white": "#fff",
         text: "rgba(0,0,0,0.5)",
+        divider: "rgba(255,255,255,0.1)",
+        "color-gray": "#f1f1f1;",
+      },
+      backgroundImage: {
+        heroImg: "url('/assets/image-hero.jpg')",
+        heroImgMobile: "url('/assets/image-hero-mobile.jpg')",
       },
     },
   },
