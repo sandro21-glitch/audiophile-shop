@@ -12,6 +12,7 @@ body {
   background: var(--clr-white);
   color: var(--clr-grey-1);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
