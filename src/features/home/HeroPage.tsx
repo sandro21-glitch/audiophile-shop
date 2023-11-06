@@ -15,7 +15,7 @@ const HeroPage = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <SeeProductBtn />
+          <SeeProductBtn color="#d87d4a" />
         </div>
         {/* right side */}
         <div
