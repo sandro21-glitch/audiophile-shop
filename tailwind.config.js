@@ -16,6 +16,7 @@ export default {
       backgroundImage: {
         heroImg: "url('/assets/image-hero.jpg')",
         heroImgMobile: "url('/assets/image-hero-mobile.jpg')",
+        circles: "url('/assets/pattern-circles.svg')",
       },
     },
   },
