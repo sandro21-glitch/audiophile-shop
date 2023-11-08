@@ -7,7 +7,14 @@ const SpeakerZx7ProductCard = () => {
         <h2 className="mb-7 text-[2rem] text-black font-semibold">
           ZX7 SPEAKER
         </h2>
-        <SeeProductBtn color="black" />
+        <SeeProductBtn
+          colorClass="border-black border"
+          bgClass="bg-transparent "
+          hoverClass="hover:bg-[black] hover:text-white"
+          text="black"
+        >
+          See Product
+        </SeeProductBtn>
       </div>
     </li>
   );
