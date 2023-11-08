@@ -1,16 +1,23 @@
-type ButtonTypes = {
-  color: string;
+interface ButtonProps {
+  children: React.ReactNode;
+  colorClass?: string;
+  bgClass?: string;
+  hoverClass?: string;
+  text?: string;
+}
+const Button = ({
+  children,
+  colorClass,
+  bgClass,
+  hoverClass,
+  text,
+}: ButtonProps) => {
+  const buttonClasses = `
+    mb-5 px-8 py-3
+     font-semibold uppercase transition ease-in duration-150
+    text-[.9rem] ${bgClass} text-${text} ${colorClass} ${hoverClass}`;
+
+  return <button className={buttonClasses}>{children}</button>;
 };
 
-const SeeProductBtn = ({ color }: ButtonTypes) => {
-  return (
-    <button
-      style={{ backgroundColor: color }}
-      className={` px-8 py-3 text-white font-semibold uppercase text-[.9rem] hover:opacity-80 transition-all ease-in duration-150`}
-    >
-      See Product
-    </button>
-  );
-};
-
-export default SeeProductBtn;
+export default Button;
