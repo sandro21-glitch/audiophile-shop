@@ -88,11 +88,14 @@ p {
   margin: 0 auto;
 }
 
-.bg-circles-center_mobile {
-  background-position: center -7rem;
-  background-size: contain;
-}
+
 .bg-circles-center {
-  background-position: -15rem -9.125rem;
+  background-position: center -8rem;
   background-size: cover;
+}
+@media screen and (min-width:1024px) {
+  .bg-circles-center {
+    background-position: -15rem -9.125rem;
+    background-size: cover;
+  }
 }
