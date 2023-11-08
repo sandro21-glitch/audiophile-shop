@@ -8,14 +8,13 @@ const SpeakerProductCard = () => {
        pb-0 pt-20 overflow-hidden bg-no-repeat rounded-lg"
       style={{
         backgroundImage: 'url("/assets/pattern-circles.svg")',
-        // backgroundPosition: "-15rem -9.125rem",
       }}
     >
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col justify-center items-center lg:flex-row ">
         <img
           src={speaker}
           alt="speaker"
-          className="w-[12.3125rem] h-auto lg:w-[25.625rem] ml-[7rem] object-cover relative top-[0.8rem]"
+          className="w-[12.3125rem] h-auto lg:w-[25.625rem] lg:ml-[7rem] object-cover relative top-[0.8rem]"
         />
         <div className="text-center lg:text-left ml-0 lg:ml-36 mt-[2rem] ">
           <h2 className="mb-7 text-[4rem] text-white font-semibold">
@@ -25,7 +24,14 @@ const SpeakerProductCard = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <SeeProductBtn color="black" />
+          <SeeProductBtn
+            colorClass="border-blue-500"
+            bgClass="bg-black"
+            hoverClass="hover:bg-[#4C4C4C]"
+            text="text-white"
+          >
+            See Product
+          </SeeProductBtn>
         </div>
       </div>
     </li>
