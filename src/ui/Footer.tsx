@@ -7,8 +7,12 @@ import {
 } from "react-icons/ai";
 const Footer = () => {
   return (
-    <footer className="bg-primary-color mt-36">
-      <nav className="section-center text-text-white py-20 px-5">
+    <footer
+      className="bg-primary-color mt-36
+     "
+    >
+      <nav className="section-center text-text-white py-20 px-5
+       relative after:w-[6rem] after:h-1 after:bg-orange-brown after:absolute after:left-5 after:top-0">
         <div className="flex flex-col lg:flex-row items-start justify-between lg:items-center">
           <button className="mb-5 lg:mb-0">
             <img src={logo} alt="logo" />
