@@ -5,7 +5,7 @@ import earphones from "/assets/image-earphones.png";
 import arrowRight from "/assets/icon-arrow-right.svg";
 const Products = () => {
   return (
-    <ul className="mt-28 flex items-center justify-between gap-7">
+    <ul className="my-28 flex items-center justify-between gap-7">
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
         <Link to="/headphones">
           <img
