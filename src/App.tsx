@@ -3,11 +3,14 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
-import Hadphones from "./features/headphones/Hadphones";
+import Hadphones from "./features/headphones/Headphones";
 import { useAppDispatch } from "./hooks/reduxHooks";
 import { useEffect } from "react";
 import { getProductData } from "./dataUtils";
 import { setProductData } from "./features/products/productsSlice";
+import Speakers from "./features/speakers/Speakers";
+import Earphones from "./features/earphones/Earphones";
+
 function App() {
   const productData = getProductData();
   const dispatch = useAppDispatch();
@@ -20,6 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Hadphones />} />
+        <Route path="/speakers" element={<Speakers />} />
+        <Route path="/earphones" element={<Earphones />} />
       </Routes>
       <Footer />
     </BrowserRouter>
