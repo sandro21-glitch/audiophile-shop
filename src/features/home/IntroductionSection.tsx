@@ -5,7 +5,7 @@ const IntroductionSection = () => {
     <div className="flex items-center lg:flex-row flex-col-reverse">
       {/* left */}
       <div className="flex-1 ">
-        <h2 className="font-medium">
+        <h2 className="font-medium mb-5">
           BRINGING YOU THE <span className="text-orange-brown">BEST</span> AUDIO
           GEAR
         </h2>
