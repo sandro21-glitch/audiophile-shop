@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 // import type { RootState } from "../../store";
-interface Product {
+export interface Product {
   id: number;
   slug: string;
   name: string;
@@ -55,10 +55,14 @@ interface Product {
 }
 interface ProductsState {
   product: Product[];
+  setError: boolean;
+  setLoading: boolean;
 }
 
 const initialState: ProductsState = {
   product: [],
+  setError: false,
+  setLoading: false,
 };
 
 export const counterSlice = createSlice({
