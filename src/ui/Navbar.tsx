@@ -14,13 +14,13 @@ const Navbar = () => {
               <Link to="/">HOME</Link>
             </li>
             <li className="text-[0.875rem] hover:text-orange-brown transition-colors ease-in duration-150 tracking-wider">
-              <Link to="/">HEADPHONES</Link>
+              <Link to="/headphones">HEADPHONES</Link>
             </li>
             <li className="text-[0.875rem] hover:text-orange-brown transition-colors ease-in duration-150 tracking-wider">
-              <Link to="/">SPEAKERS</Link>
+              <Link to="/speakers">SPEAKERS</Link>
             </li>
             <li className="text-[0.875rem] hover:text-orange-brown transition-colors ease-in duration-150 tracking-wider">
-              <Link to="/">EARPHONES</Link>
+              <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
           <button>
