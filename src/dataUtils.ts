@@ -1,6 +1,6 @@
 // dataUtils.js
-import data from "./data/products.json";
+import { products } from "./data/products";
 
 export function getProductData() {
-  return data;
+  return products;
 }
