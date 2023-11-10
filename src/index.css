@@ -86,14 +86,14 @@ p {
 .section-center {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 1rem;
 }
-
 
 .bg-circles-center {
   background-position: center -8rem;
   background-size: cover;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .bg-circles-center {
     background-position: -15rem -9.125rem;
     background-size: cover;
