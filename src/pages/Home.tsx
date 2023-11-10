@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section>
       <HeroPage />
-      <div className="section-center px-5">
+      <div className="section-center">
         <Products />
         <SingleProductLink />
         <IntroductionSection />
