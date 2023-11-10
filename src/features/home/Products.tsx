@@ -23,14 +23,14 @@ const Products = () => {
         </div>
       </li>
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
-        <Link to="/headphones">
+        <Link to="/speakers">
           <img
             src={speakers}
             alt="speakers"
             className="w-[8.625rem] h-auto absolute -top-10 left-0 right-0 mx-auto"
           />
         </Link>
-        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">headphones</h4>
+        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">speakers</h4>
         <div className="flex items-center gap-3">
           <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
             shop
@@ -39,14 +39,14 @@ const Products = () => {
         </div>
       </li>
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
-        <Link to="/headphones">
+        <Link to="/earphones">
           <img
             src={earphones}
             alt="earphones"
             className="w-[8.625rem] h-auto absolute -top-10 left-0 right-0 mx-auto"
           />
         </Link>
-        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">headphones</h4>
+        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">earphones</h4>
         <div className="flex items-center gap-3">
           <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
             shop
