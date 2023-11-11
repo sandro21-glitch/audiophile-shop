@@ -10,6 +10,7 @@ import { getProductData } from "./dataUtils";
 import { setProductData } from "./features/products/productsSlice";
 import Speakers from "./features/speakers/Speakers";
 import Earphones from "./features/earphones/Earphones";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   const productData = getProductData();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/headphones" element={<Hadphones />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
+        <Route path="/:prodPath/:prodId" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </BrowserRouter>
