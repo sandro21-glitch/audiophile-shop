@@ -55,14 +55,12 @@ export interface Product {
 }
 interface ProductsState {
   product: Product[];
-  setError: boolean;
-  setLoading: boolean;
+  singleProduct: Product | null;
 }
 
 const initialState: ProductsState = {
   product: [],
-  setError: false,
-  setLoading: false,
+  singleProduct: null,
 };
 
 export const counterSlice = createSlice({
@@ -72,10 +70,16 @@ export const counterSlice = createSlice({
     setProductData: (state, action) => {
       state.product = action.payload;
     },
+    getSingleProduct: (state, action) => {
+      const singleProductData = state.product.find(
+        (prod) => prod.id.toString() === action.payload
+      );
+      state.singleProduct = singleProductData || null; // Adjusted here
+    },
   },
 });
 
-export const { setProductData } = counterSlice.actions;
+export const { setProductData, getSingleProduct } = counterSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 // export const selectCount = (state: RootState) => state.counter.value;
