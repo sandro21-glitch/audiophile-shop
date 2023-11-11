@@ -13,7 +13,11 @@ const SingleHeadphone = ({ singleProduct, index }: SingleHeadphoneProps) => {
         index === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
       } flex-col`}
     >
-      <div className={`flex-1 ${index === 1 ? "lg:ml-[7rem]" : "lg:mr-[7rem]"} w-full mb-7`}>
+      <div
+        className={`flex-1 ${
+          index === 1 ? "lg:ml-[7rem]" : "lg:mr-[7rem]"
+        } w-full mb-7`}
+      >
         <img
           src={singleProduct.image.mobile}
           alt={singleProduct.name}
@@ -47,6 +51,7 @@ const SingleHeadphone = ({ singleProduct, index }: SingleHeadphoneProps) => {
           bgClass="bg-[#d87d4a]"
           text="white"
           hoverClass="hover:bg-[#fbaf85]"
+          prodId={singleProduct.id}
         >
           See product
         </Button>
