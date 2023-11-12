@@ -3,8 +3,9 @@ import { getSingleProduct } from "../features/products/productsSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../hooks/reduxHooks";
-import { formatPrice } from "../utils/formatPrice";
-import AddToCart from "../ui/AddToCart";
+
+import ProductInfoLeft from "../features/singleProduct/ProductInfoLeft";
+import ProdutInfoRight from "../features/singleProduct/ProdutInfoRight";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -36,47 +37,35 @@ const SingleProduct = () => {
           Go Back
         </button>
         {/* product info */}
-        <div>
-          <li className="flex  items-center">
-            <div className="flex-1 mr-[7rem]">
-              <img
-                src={singleProduct.image.mobile}
-                alt={singleProduct.name}
-                className="block md:hidden w-full h-full object-cover"
-              />
-              <img
-                src={singleProduct.categoryImage.tablet}
-                alt={singleProduct.name}
-                className="hidden md:block lg:hidden h-full object-cover"
-              />
-              <img
-                src={singleProduct.categoryImage.desktop}
-                alt={singleProduct.name}
-                className="hidden lg:block h-full object-cover"
-              />
+        <ul className="flex flex-col">
+          <li className="flex  items-center mb-[10rem]">
+            <ProductInfoLeft
+              image={singleProduct.image}
+              name={singleProduct.name}
+            />
+            <ProdutInfoRight singleProduct={singleProduct} />
+          </li>
+          <li className="flex flex-col lg:flex-row">
+            {/* product features */}
+            <div className="flex-1 mr-[0] mb-20 lg:mr-[7rem]">
+              <h3 className="uppercase text-black font-medium tracking-wider">features</h3>
+              <p className="text-text leading-5">{singleProduct.features}</p>
             </div>
-            <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-[2.5rem] font-semibold mb-7">
-                {singleProduct.new && (
-                  <strong className="text-orange-brown block text-[1rem] uppercase tracking-[.5em] font-normal">
-                    New Product
-                  </strong>
-                )}
-                {singleProduct.new && <br />}
-                <span className="max-w-[350px] mx-auto lg:mx-0 block break-words">
-                  {singleProduct.name}
-                </span>
-              </h2>
-              <p className="text-text mb-7 leading-6">
-                {singleProduct.description}
-              </p>
-              <p className="text-black font-medium tracking-wider mb-7">
-                {formatPrice(singleProduct.price)}
-              </p>
-              <AddToCart />
+            <div className="flex-1 ">
+              <h3 className="uppercase text-black font-medium tracking-wider">IN THE BOX</h3>
+              {singleProduct.includedItems.map((item) => {
+                return (
+                  <div className="grid grid-cols">
+                    <span className="text-orange-brown font-medium">
+                      {item.quantity}x
+                    </span>
+                    <span>{item.item}</span>
+                  </div>
+                );
+              })}
             </div>
           </li>
-        </div>
+        </ul>
       </article>
     </section>
   );
