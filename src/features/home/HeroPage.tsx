@@ -2,7 +2,10 @@ import SeeProductBtn from "../../ui/SeeProductBtn";
 const HeroPage = () => {
   return (
     <article className="w-full bg-primary-color px-5">
-      <div className="section-center relative overflow-hidden py-40 flex lg:block justify-center items-center">
+      <div
+        style={{ padding: "8rem 0" }}
+        className="section-center relative overflow-hidden  flex lg:block justify-center items-center"
+      >
         {/* left Side */}
         <div className="relative z-[2] text-center lg:text-left">
           <h6 className="uppercase text-textLight tracking-[.5rem] font-semibold mb-5">
@@ -15,7 +18,12 @@ const HeroPage = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <SeeProductBtn text="white" bgClass="bg-[#d87d4a]" hoverClass="hover:bg-[#fbaf85]">
+          <SeeProductBtn
+            prodId={1}
+            text="white"
+            bgClass="bg-[#d87d4a]"
+            hoverClass="hover:bg-[#fbaf85]"
+          >
             SEE PRODUCT
           </SeeProductBtn>
         </div>
