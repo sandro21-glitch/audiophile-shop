@@ -99,3 +99,7 @@ p {
     background-size: cover;
   }
 }
+
+.grid-cols {
+  grid-template-columns: 2rem 1fr;
+}
