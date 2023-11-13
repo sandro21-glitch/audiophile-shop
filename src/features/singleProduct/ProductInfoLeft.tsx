@@ -9,9 +9,9 @@ type ProdInfoTyps = {
 
 const ProductInfoLeft = ({ image, name }: ProdInfoTyps) => {
   return (
-    <div className="flex-1 mr-[2rem] lg:mr-[7rem]">
+    <div className="mr-[2rem] lg:mr-[7rem]">
       <img
-        src={image.mobile}
+        src={image.tablet}
         alt={name}
         className="block md:hidden w-full h-full object-cover rounded-lg"
       />
