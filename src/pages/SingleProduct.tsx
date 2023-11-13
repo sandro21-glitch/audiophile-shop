@@ -6,6 +6,8 @@ import { useAppSelector } from "../hooks/reduxHooks";
 
 import ProductInfoLeft from "../features/singleProduct/ProductInfoLeft";
 import ProdutInfoRight from "../features/singleProduct/ProdutInfoRight";
+import ProductGalerry from "../features/singleProduct/ProductGalerry";
+import ProductFeatures from "../features/singleProduct/ProductFeatures";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -47,25 +49,10 @@ const SingleProduct = () => {
           </li>
           <li className="flex flex-col lg:flex-row">
             {/* product features */}
-            <div className="flex-1 mr-[0] mb-20 lg:mr-[7rem]">
-              <h3 className="uppercase text-black font-medium tracking-wider">features</h3>
-              <p className="text-text leading-5">{singleProduct.features}</p>
-            </div>
-            <div className="flex-1 ">
-              <h3 className="uppercase text-black font-medium tracking-wider">IN THE BOX</h3>
-              {singleProduct.includedItems.map((item) => {
-                return (
-                  <div className="grid grid-cols">
-                    <span className="text-orange-brown font-medium">
-                      {item.quantity}x
-                    </span>
-                    <span>{item.item}</span>
-                  </div>
-                );
-              })}
-            </div>
+            <ProductFeatures singleProduct={singleProduct} />
           </li>
         </ul>
+        <ProductGalerry singleProduct={singleProduct} />
       </article>
     </section>
   );
