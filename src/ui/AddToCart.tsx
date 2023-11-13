@@ -1,16 +1,30 @@
-// import { useState } from "react";
+import { useState } from "react";
 const AddToCart = () => {
-//   const [itemCount, setItemCount] = useState(0);
+  const [itemCount, setItemCount] = useState(1);
 
+  const handleIncreaseAmount = () => {
+    setItemCount((prevCount) => prevCount + 1);
+  };
+  const handleDecreaseAmount = () => {
+    if (itemCount <= 1) return;
+    setItemCount((prevCount) => prevCount - 1);
+  };
+  
   return (
-    <div>
+    <div className="">
       {/* item count control */}
       <div className="w-[7.5rem] h-[3rem] bg-color-gray inline-flex justify-center items-center mx-auto">
-        <button className="w-[50%] h-full mx-auto p-0 hover:bg-textLight transition-colors ease-in duration-150">
+        <button
+          onClick={handleDecreaseAmount}
+          className="w-[50%] h-full mx-auto p-0 hover:bg-textLight transition-colors ease-in duration-150"
+        >
           -
         </button>
-        <span className="px-2">1</span>
-        <button className="w-[50%] h-full mx-auto p-0 hover:bg-textLight transition-colors ease-in duration-150">
+        <span className="px-2 text-[.8rem] font-bold">{itemCount}</span>
+        <button
+          onClick={handleIncreaseAmount}
+          className="w-[50%] h-full mx-auto p-0 hover:bg-textLight transition-colors ease-in duration-150"
+        >
           +
         </button>
       </div>
