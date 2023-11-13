@@ -4,7 +4,7 @@ import { Product } from "../products/productsSlice";
 
 const ProdutInfoRight = ({ singleProduct }: { singleProduct: Product }) => {
   return (
-    <div className="flex-1 text-left lg:text-left">
+    <div className=" text-left lg:text-left">
       <h2 className="text-[2.5rem] font-semibold mb-7">
         {singleProduct.new && (
           <strong className="text-orange-brown block text-[1rem] uppercase tracking-[.5em] font-normal">
@@ -17,7 +17,7 @@ const ProdutInfoRight = ({ singleProduct }: { singleProduct: Product }) => {
         </span>
       </h2>
       <p className="text-text mb-7 leading-6">{singleProduct.description}</p>
-      <p className="text-black font-medium tracking-wider mb-7">
+      <p className="text-black font-semibold tracking-wider mb-7">
         {formatPrice(singleProduct.price)}
       </p>
       <AddToCart />
