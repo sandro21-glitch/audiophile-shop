@@ -8,6 +8,9 @@ import ProductInfoLeft from "../features/singleProduct/ProductInfoLeft";
 import ProdutInfoRight from "../features/singleProduct/ProdutInfoRight";
 import ProductGalerry from "../features/singleProduct/ProductGalerry";
 import ProductFeatures from "../features/singleProduct/ProductFeatures";
+import Products from "../features/home/Products";
+import IntroductionSection from "../features/home/IntroductionSection";
+import SimilarProducts from "../features/singleProduct/SimilarProducts";
 
 const SingleProduct = () => {
   const navigate = useNavigate();
@@ -47,12 +50,15 @@ const SingleProduct = () => {
             />
             <ProdutInfoRight singleProduct={singleProduct} />
           </li>
-          <li className="flex flex-col lg:flex-row">
+          <li className="flex flex-col lg:flex-row mb-20 lg:mb-0">
             {/* product features */}
             <ProductFeatures singleProduct={singleProduct} />
           </li>
         </ul>
         <ProductGalerry singleProduct={singleProduct} />
+        <SimilarProducts />
+        <Products />
+        <IntroductionSection />
       </article>
     </section>
   );
