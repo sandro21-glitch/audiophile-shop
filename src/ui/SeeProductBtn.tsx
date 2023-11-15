@@ -9,7 +9,7 @@ interface ButtonProps {
   prodId: number;
 }
 
-const Button = ({
+const SeeProductBtn = ({
   children,
   colorClass,
   bgClass,
@@ -23,16 +23,9 @@ const Button = ({
     <button
       className={`mb-5 px-8 py-3 font-semibold uppercase transition ease-in duration-150 text-[.9rem] ${bgClass} text-${text} ${colorClass} ${hoverClass}`}
     >
-      <Link
-        to={`${pathname}/${encodeURIComponent(prodId)
-          .replace(/%/g, "-")
-          .replace(/20/g, "")
-          .toLowerCase()}`}
-      >
-        {children}
-      </Link>
+      <Link to={`${pathname}/${prodId}`}>{children}</Link>
     </button>
   );
 };
 
-export default Button;
+export default SeeProductBtn;
