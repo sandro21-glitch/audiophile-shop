@@ -63,7 +63,7 @@ const initialState: ProductsState = {
   singleProduct: null,
 };
 
-export const counterSlice = createSlice({
+export const productSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
@@ -79,9 +79,9 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { setProductData, getSingleProduct } = counterSlice.actions;
+export const { setProductData, getSingleProduct } = productSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 // export const selectCount = (state: RootState) => state.counter.value;
 
-export default counterSlice.reducer;
+export default productSlice.reducer;
