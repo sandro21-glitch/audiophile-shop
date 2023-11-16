@@ -11,6 +11,8 @@ import { setProductData } from "./features/products/productsSlice";
 import Speakers from "./features/speakers/Speakers";
 import Earphones from "./features/earphones/Earphones";
 import SingleProduct from "./pages/SingleProduct";
+import ScrollToTop from "./utils/ScrollToTop";
+import CartPopup from "./features/cart/CartPopup";
 
 function App() {
   const productData = getProductData();
@@ -20,13 +22,15 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
+      <CartPopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Hadphones />} />
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
-        <Route path="/:prodPath/:prodId" element={<SingleProduct />} />
+        <Route path="/product/:prodId" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </BrowserRouter>
