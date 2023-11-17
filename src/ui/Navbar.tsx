@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "/assets/logo.svg";
 import cart from "/assets/icon-cart.svg";
+import { setOpenCart } from "../features/cart/cartSlice";
+import { useAppDispatch } from "../hooks/reduxHooks";
 const Navbar = () => {
+  const dispatch = useAppDispatch();
   return (
     <header className="w-full bg-primary-color py-10 relative after:absolute after:w-[72.375rem] after:mx-auto after:left-0 after:right-0 after:h-[1px] after:bg-divider after:bottom-0 ">
       <nav className="section-center text-text-white">
@@ -23,7 +26,7 @@ const Navbar = () => {
               <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
-          <button>
+          <button onClick={() => dispatch(setOpenCart())}>
             <img src={cart} alt="cart" />
           </button>
         </div>
