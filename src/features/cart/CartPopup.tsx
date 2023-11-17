@@ -1,19 +1,13 @@
-import { useEffect } from "react";
 import CartHeader from "./CartHeader";
 import CartProducts from "./CartProducts";
 import CartTotal from "./CartTotal";
 import CartCheckout from "./CartCheckout";
+import { useAppSelector } from "../../hooks/reduxHooks";
 
 const CartPopup = () => {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
+  const openCart = useAppSelector((store) => store.cart.openCart);
 
-    // remove the class when the component unmounts
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  }, []);
-
+  if (!openCart) return null;
   return (
     <div className="w-screen h-screen fixed z-[9999] left-0 right-0 top-0 bottom-0 overflow-hidden">
       <div className="bg-black absolute opacity-40 w-full h-full z-1"></div>
