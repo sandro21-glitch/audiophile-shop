@@ -12,6 +12,7 @@ export default {
         text: "rgba(0,0,0,0.5)",
         divider: "rgba(255,255,255,0.1)",
         "color-gray": "#f1f1f1;",
+        "light-gray": "#d3d3d3",
       },
       backgroundImage: {
         heroImg: "url('/assets/image-hero.jpg')",
