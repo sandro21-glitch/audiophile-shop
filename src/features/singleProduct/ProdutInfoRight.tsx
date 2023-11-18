@@ -20,7 +20,7 @@ const ProdutInfoRight = ({ singleProduct }: { singleProduct: Product }) => {
       <p className="text-black font-semibold tracking-wider mb-7">
         {formatPrice(singleProduct.price)}
       </p>
-      <AddToCart />
+      <AddToCart singleProduct={singleProduct} />
     </div>
   );
 };
