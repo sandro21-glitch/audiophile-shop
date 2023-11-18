@@ -1,16 +1,18 @@
-const CartSingleProduct = () => {
+import { CartTypes } from "./cartSlice";
+
+const CartSingleProduct = ({ cartItem }: CartTypes) => {
+  const { name, image, price, id, amount } = cartItem;
+
   return (
-    <div className="flex items-center gap-2">
-      <img
-        src="https://audiophile-ecommerce-mbart13.vercel.app/_next/image?url=%2Fimages%2Fcart%2Fimage-xx59-headphones.jpg&w=64&q=75"
-        alt=""
-        className="rounded-md"
-      />
+    <div className="flex items-center gap-2" key={id}>
+      <img src={image.mobile} alt={name} className="rounded-md" />
       <div>
-        <p className=" text-black text-[1rem]">XX59</p>
-        <p className="font-medium text-text text-[.9rem]">$ 899</p>
+        <p>{amount}</p>
+        <p className="text-black text-[1rem]">{name}</p>
+        <p className="font-medium text-text text-[.9rem]">${price}</p>
       </div>
     </div>
   );
 };
-export default CartSingleProduct
+
+export default CartSingleProduct;
