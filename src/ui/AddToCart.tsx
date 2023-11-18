@@ -1,7 +1,10 @@
-import { useState } from "react";
-const AddToCart = () => {
+import { useState} from "react";
+import { Product } from "../features/products/productsSlice";
+import { useAppDispatch } from "../hooks/reduxHooks";
+import { addToCart } from "../features/cart/cartSlice";
+const AddToCart = ({ singleProduct }: { singleProduct: Product }) => {
   const [itemCount, setItemCount] = useState(1);
-
+  const dispatch = useAppDispatch();
   const handleIncreaseAmount = () => {
     setItemCount((prevCount) => prevCount + 1);
   };
@@ -9,7 +12,18 @@ const AddToCart = () => {
     if (itemCount <= 1) return;
     setItemCount((prevCount) => prevCount - 1);
   };
-  
+
+  const handleAddProductCart = () => {
+    const cartProduct = {
+      id: singleProduct.id,
+      name: singleProduct.name,
+      image: singleProduct.image,
+      price: singleProduct.price,
+      amount: itemCount,
+    };
+    dispatch(addToCart(cartProduct));
+  };
+
   return (
     <div className="">
       {/* item count control */}
@@ -29,6 +43,7 @@ const AddToCart = () => {
         </button>
       </div>
       <button
+        onClick={handleAddProductCart}
         type="button"
         className="h-[3rem] uppercase ml-5 bg-orange-brown px-5 text-[.8rem] text-white font-medium hover:bg-orange-brown-light transition-colors ease-in duration-150"
       >
