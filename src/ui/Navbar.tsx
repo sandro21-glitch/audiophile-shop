@@ -26,7 +26,7 @@ const Navbar = () => {
               <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
-          <button onClick={() => dispatch(setOpenCart())}>
+          <button onClick={() => dispatch(setOpenCart(true))}>
             <img src={cart} alt="cart" />
           </button>
         </div>
