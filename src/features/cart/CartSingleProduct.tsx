@@ -1,11 +1,11 @@
 import { CartTypes } from "./cartSlice";
 
 const CartSingleProduct = ({ cartItem }: CartTypes) => {
-  const { name, image, price, id, amount } = cartItem;
+  const { name, cartImage, price, id, amount } = cartItem;
 
   return (
     <div className="flex items-center gap-2" key={id}>
-      <img src={image.mobile} alt={name} className="rounded-md" />
+      <img src={cartImage} alt={name} className="rounded-md w-20 h-20" />
       <div>
         <p>{amount}</p>
         <p className="text-black text-[1rem]">{name}</p>
