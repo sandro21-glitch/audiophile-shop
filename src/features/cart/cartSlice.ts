@@ -5,21 +5,17 @@ export interface CartTypes {
   cartItem: {
     id: number;
     name: string;
-    image: {
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
+    cartImage: string;
     price: number;
     amount: number;
   };
 }
-interface ProductsState {
+interface CartState {
   cart: CartTypes[];
   openCart: boolean;
 }
 
-const initialState: ProductsState = {
+const initialState: CartState = {
   cart: [],
   openCart: false,
 };
