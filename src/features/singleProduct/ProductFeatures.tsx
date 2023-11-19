@@ -13,9 +13,9 @@ const ProductFeatures = ({ singleProduct }: { singleProduct: Product }) => {
         <h3 className="uppercase text-black font-medium tracking-wider">
           IN THE BOX
         </h3>
-        {singleProduct.includedItems.map((item) => {
+        {singleProduct.includedItems.map((item, index) => {
           return (
-            <div className="grid grid-cols">
+            <div className="grid grid-cols" key={index}>
               <span className="text-orange-brown font-medium">
                 {item.quantity}x
               </span>
