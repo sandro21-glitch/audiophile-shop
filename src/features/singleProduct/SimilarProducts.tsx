@@ -7,7 +7,7 @@ const SimilarProducts = () => {
     <div className="flex gap-7 ">
       {product.slice(0, 3).map((singleProduct) => {
         return (
-          <div>
+          <div key={singleProduct.id}>
             <div className="bg-color-gray flex-1 rounded-md p-4">
               <img src={singleProduct.image.desktop} alt="" />
             </div>
