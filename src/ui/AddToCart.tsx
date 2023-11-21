@@ -16,7 +16,7 @@ const AddToCart = ({ singleProduct }: { singleProduct: Product }) => {
   const handleAddProductCart = () => {
     const cartProduct = {
       id: singleProduct.id,
-      name: singleProduct.name,
+      shortName: singleProduct.shortName,
       cartImage: singleProduct.cartImage,
       price: singleProduct.price,
       amount: itemCount,
