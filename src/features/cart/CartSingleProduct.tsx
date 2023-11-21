@@ -1,16 +1,24 @@
+import { formatPrice } from "../../utils/formatPrice";
+import CartCounter from "./CartCounter";
 import { CartTypes } from "./cartSlice";
 
-const CartSingleProduct = ({ cartItem }: CartTypes) => {
-  const { name, cartImage, price, id, amount } = cartItem;
+const CartSingleProduct = ({ cartItem }: { cartItem: CartTypes }) => {
+  const { shortName, cartImage, price } = cartItem;
 
   return (
-    <div className="flex items-center gap-2" key={id}>
-      <img src={cartImage} alt={name} className="rounded-md w-20 h-20" />
-      <div>
-        <p>{amount}</p>
-        <p className="text-black text-[1rem]">{name}</p>
-        <p className="font-medium text-text text-[.9rem]">${price}</p>
+    <div className="flex justify-between items-center">
+      <div className="flex items-center gap-2">
+        <img src={cartImage} alt={shortName} className="rounded-md w-16 h-16" />
+        <div>
+          {/* <p>{amount}</p> */}
+          <p className="text-black text-[1rem] font-medium">{shortName}</p>
+          <p className=" text-text text-[.9rem] font-medium">
+            {formatPrice(price)}
+          </p>
+        </div>
       </div>
+      {/* single product counter */}
+      <CartCounter />
     </div>
   );
 };
