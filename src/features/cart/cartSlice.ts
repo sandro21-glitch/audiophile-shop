@@ -26,7 +26,17 @@ export const cartSlice = createSlice({
       state.openCart = action.payload;
     },
     addToCart: (state, action) => {
-      state.cart.push(action.payload);
+      const existingProduct = state.cart.find(
+        (item) => item.id === action.payload.id
+      );
+
+      if (existingProduct) {
+        // Product already exists in the cart, update its amount
+        existingProduct.amount += action.payload.amount || 1;
+      } else {
+        // Product is not in the cart, add it
+        state.cart.push(action.payload);
+      }
     },
     clearCart: (state) => {
       state.cart = [];
