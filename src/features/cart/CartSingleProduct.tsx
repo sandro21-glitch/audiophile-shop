@@ -3,7 +3,7 @@ import CartCounter from "./CartCounter";
 import { CartTypes } from "./cartSlice";
 
 const CartSingleProduct = ({ cartItem }: { cartItem: CartTypes }) => {
-  const { shortName, cartImage, price } = cartItem;
+  const { shortName, cartImage, price, amount } = cartItem;
 
   return (
     <div className="flex justify-between items-center">
@@ -18,7 +18,7 @@ const CartSingleProduct = ({ cartItem }: { cartItem: CartTypes }) => {
         </div>
       </div>
       {/* single product counter */}
-      <CartCounter />
+      <CartCounter amount={amount} />
     </div>
   );
 };
