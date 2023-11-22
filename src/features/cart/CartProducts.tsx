@@ -7,7 +7,7 @@ const CartProducts = () => {
   return (
     <div className="mb-6 w-full flex items-center justify-between ">
       {/* single product */}
-      <div className="w-full">
+      <div className="w-full flex flex-col gap-5">
         {cart.map((cartItem) => {
           return <CartSingleProduct key={cartItem.id} cartItem={cartItem} />;
         })}
