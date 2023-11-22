@@ -3,6 +3,7 @@ import logo from "/assets/logo.svg";
 import cart from "/assets/icon-cart.svg";
 import { setOpenCart } from "../features/cart/cartSlice";
 import { useAppDispatch } from "../hooks/reduxHooks";
+import CartItemCountPopup from "./CartItemCountPopup";
 const Navbar = () => {
   const dispatch = useAppDispatch();
   return (
@@ -26,9 +27,12 @@ const Navbar = () => {
               <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
-          <button onClick={() => dispatch(setOpenCart(true))}>
-            <img src={cart} alt="cart" />
-          </button>
+          <div className="relative">
+            <button onClick={() => dispatch(setOpenCart(true))}>
+              <img src={cart} alt="cart" />
+            </button>
+            <CartItemCountPopup />
+          </div>
         </div>
       </nav>
     </header>
