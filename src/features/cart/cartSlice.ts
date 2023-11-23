@@ -37,7 +37,6 @@ export const cartSlice = createSlice({
         // Product is not in the cart, add it
         state.cart.push(action.payload);
       }
-      console.log(JSON.parse(JSON.stringify(state.cart)));
     },
     increasAmount: (state, action) => {
       const findProductIndex = state.cart.findIndex(
