@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import { Product } from "../features/products/productsSlice";
 import { useAppDispatch } from "../hooks/reduxHooks";
 import { addToCart } from "../features/cart/cartSlice";
@@ -23,6 +23,10 @@ const AddToCart = ({ singleProduct }: { singleProduct: Product }) => {
     };
     dispatch(addToCart(cartProduct));
   };
+
+  useEffect(() => {
+    setItemCount(1);
+  }, [singleProduct]);
 
   return (
     <div className="">
