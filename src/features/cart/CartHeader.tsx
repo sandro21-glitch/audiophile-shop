@@ -1,13 +1,13 @@
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
-import { clearCart } from "./cartSlice";
+import { clearCart, totalCartAmount } from "./cartSlice";
 
 const CartHeader = () => {
   const dispatch = useAppDispatch();
-  const cart = useAppSelector((store) => store.cart.cart);
+  const totalAmount = useAppSelector(totalCartAmount);
   return (
     <header className="flex justify-between w-full mb-10">
       <h6 className="text-black mb-0 uppercase font-medium text-[1.1rem]">
-        Cart <span>({cart.length})</span>
+        Cart <span>({totalAmount})</span>
       </h6>
       <button
         onClick={() => dispatch(clearCart())}
