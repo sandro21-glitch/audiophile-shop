@@ -5,54 +5,69 @@ import earphones from "/assets/image-earphones.png";
 import arrowRight from "/assets/icon-arrow-right.svg";
 const Products = () => {
   return (
-    <ul className="my-28 flex items-center justify-between gap-7">
+    <ul className="my-20 lg:my-28 flex items-center justify-between gap-7">
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
-        <Link to="/headphones">
+        <Link
+          to="/headphones"
+          className="flex flex-col justify-center items-center"
+        >
           <img
             src={headphones}
             alt="headphones"
             className="w-[8.625rem] h-auto absolute -top-10 left-0 right-0 mx-auto"
           />
+          <h4 className="uppercase font-medium tracking-wider text-[.8rem] md:text-[1rem] lg:text-[1.2rem]">
+            headphones
+          </h4>
+          <div className="flex items-center gap-3">
+            <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
+              shop
+            </p>
+            <img src={arrowRight} alt="arrow right" />
+          </div>
         </Link>
-        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">headphones</h4>
-        <div className="flex items-center gap-3">
-          <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
-            shop
-          </p>
-          <img src={arrowRight} alt="arrow right" />
-        </div>
       </li>
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
-        <Link to="/speakers">
+        <Link
+          to="/speakers"
+          className="flex flex-col justify-center items-center"
+        >
           <img
             src={speakers}
             alt="speakers"
             className="w-[8.625rem] h-auto absolute -top-10 left-0 right-0 mx-auto"
           />
+          <h4 className="uppercase font-medium tracking-wider text-[.8rem] md:text-[1rem] lg:text-[1.2rem]">
+            speakers
+          </h4>
+          <div className="flex items-center gap-3">
+            <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
+              shop
+            </p>
+            <img src={arrowRight} alt="arrow right" />
+          </div>
         </Link>
-        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">speakers</h4>
-        <div className="flex items-center gap-3">
-          <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
-            shop
-          </p>
-          <img src={arrowRight} alt="arrow right" />
-        </div>
       </li>
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
-        <Link to="/earphones">
+        <Link
+          to="/earphones"
+          className="flex flex-col justify-center items-center"
+        >
           <img
             src={earphones}
             alt="earphones"
             className="w-[8.625rem] h-auto absolute -top-10 left-0 right-0 mx-auto"
           />
+          <h4 className="uppercase font-medium tracking-wider text-[.8rem] md:text-[1rem] lg:text-[1.2rem]">
+            earphones
+          </h4>
+          <div className="flex items-center gap-3">
+            <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
+              shop
+            </p>
+            <img src={arrowRight} alt="arrow right" />
+          </div>
         </Link>
-        <h4 className="uppercase font-medium tracking-wider text-[1rem] lg:text-[1.2rem]">earphones</h4>
-        <div className="flex items-center gap-3">
-          <p className="uppercase group-hover:text-orange-brown transition-colors ease-in duration-150 text-text font-medium text-[0.8125rem]">
-            shop
-          </p>
-          <img src={arrowRight} alt="arrow right" />
-        </div>
       </li>
     </ul>
   );
