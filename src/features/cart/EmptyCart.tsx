@@ -2,7 +2,7 @@ import emptyCart from "/images/cart/empty-cart.png";
 const EmptyCart = () => {
   return (
     <div className="relative ">
-      <div className="absolute scale-up-center right-[13rem] top-[8rem] bg-white max-w-[25rem] w-full rounded-lg">
+      <div className="absolute scale-up-center right-[3.5rem] lg:right-[13rem] top-[8rem] bg-white max-w-[25rem] w-full rounded-lg">
         <div className="p-5">
           <h6 className="py-10 text-center font-medium text-text">
             Your cart is empty
