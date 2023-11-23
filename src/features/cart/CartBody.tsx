@@ -6,7 +6,7 @@ import CartTotal from "./CartTotal";
 const CartBody = () => {
   return (
     <div className="relative">
-      <div className="absolute scale-up-center right-[4rem] lg:right-[13rem] top-[8rem] bg-white max-w-[25rem] w-full rounded-lg">
+      <div className="absolute scale-up-center right-[3.5rem] lg:right-[13rem] top-[8rem] bg-white max-w-[25rem] w-full rounded-lg">
         <div className="p-5">
           {/*  cart header*/}
           <CartHeader />
