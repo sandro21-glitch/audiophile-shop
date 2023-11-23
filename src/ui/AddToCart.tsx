@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Product } from "../features/products/productsSlice";
 import { useAppDispatch } from "../hooks/reduxHooks";
 import { addToCart } from "../features/cart/cartSlice";
+import toast from "react-hot-toast";
 const AddToCart = ({ singleProduct }: { singleProduct: Product }) => {
   const [itemCount, setItemCount] = useState(1);
   const dispatch = useAppDispatch();
@@ -22,6 +23,7 @@ const AddToCart = ({ singleProduct }: { singleProduct: Product }) => {
       amount: itemCount,
     };
     dispatch(addToCart(cartProduct));
+    toast.success(`Item ${cartProduct.shortName} was added to cart`);
   };
 
   useEffect(() => {
