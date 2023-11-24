@@ -32,6 +32,7 @@ const EarphonesProductCart = () => {
             bgClass="bg-transparent "
             hoverClass="hover:bg-[black] hover:text-white"
             text="black"
+            prodId={1}
           >
             See Product
           </SeeProductBtn>
