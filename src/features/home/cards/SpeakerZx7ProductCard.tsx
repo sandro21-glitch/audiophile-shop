@@ -12,6 +12,7 @@ const SpeakerZx7ProductCard = () => {
           bgClass="bg-transparent "
           hoverClass="hover:bg-[black] hover:text-white"
           text="black"
+          prodId={5}
         >
           See Product
         </SeeProductBtn>
