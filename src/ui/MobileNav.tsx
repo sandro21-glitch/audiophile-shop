@@ -6,7 +6,7 @@ type MobileTypes = {
 };
 const MobileNav = ({ isOpen, setOpen }: MobileTypes) => {
   return (
-    <div className="block lg:hidden">
+    <div className="block lg:hidden static">
       <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
     </div>
   );
