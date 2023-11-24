@@ -29,6 +29,7 @@ const SpeakerProductCard = () => {
             bgClass="bg-black"
             hoverClass="hover:bg-[#4C4C4C]"
             text="text-white"
+            prodId={6}
           >
             See Product
           </SeeProductBtn>
