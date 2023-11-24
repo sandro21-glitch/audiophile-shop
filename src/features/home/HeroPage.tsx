@@ -19,7 +19,7 @@ const HeroPage = () => {
             made for the passionate music enthusiast.
           </p>
           <SeeProductBtn
-            prodId={1}
+            prodId={4}
             text="white"
             bgClass="bg-[#d87d4a]"
             hoverClass="hover:bg-[#fbaf85]"
