@@ -1,8 +1,11 @@
 import emptyCart from "/images/cart/empty-cart.png";
 const EmptyCart = () => {
   return (
-    <div className="relative ">
-      <div className="absolute scale-up-center right-[3.5rem] lg:right-[13rem] top-[8rem] bg-white max-w-[25rem] w-full rounded-lg">
+    <div className="relative mx-5 lg:mx-0">
+      <div
+        className="absolute scale-up-center
+        left-0 right-0 md:left-1/2 top-[8rem] bg-white min-w-[20rem] max-w-[25rem] mx-auto rounded-lg"
+      >
         <div className="p-5">
           <h6 className="py-10 text-center font-medium text-text">
             Your cart is empty
