@@ -14,6 +14,7 @@ import SingleProduct from "./pages/SingleProduct";
 import ScrollToTop from "./utils/ScrollToTop";
 import CartPopup from "./features/cart/CartPopup";
 import { Toaster } from "react-hot-toast";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const productData = getProductData();
@@ -32,6 +33,7 @@ function App() {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
         <Route path="/product/:prodId" element={<SingleProduct />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
       <Toaster
