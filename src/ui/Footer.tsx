@@ -17,7 +17,7 @@ const Footer = () => {
           <button className="mb-5 lg:mb-0">
             <img src={logo} alt="logo" />
           </button>
-          <ul className="flex-center gap-8 font-medium ">
+          <ul className="flex items-center flex-wrap gap-5 font-medium ">
             <li className="text-[0.875rem] hover:text-orange-brown transition-colors ease-in duration-150 tracking-wider">
               <Link to="/">HOME</Link>
             </li>
