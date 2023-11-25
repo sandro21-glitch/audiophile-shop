@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Products from "../features/home/Products";
 
 type NavProps = {
@@ -5,10 +6,15 @@ type NavProps = {
 };
 
 const MobileNavPop = ({ isOpen }: NavProps) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowX = "hidden";
+    }
+  }, [isOpen]);
   return (
     <>
       <div
-        className={`${
+        className={` ${
           isOpen ? "block" : "hidden"
         } lg:hidden fixed left-0 top-0 right-0 bottom-0 z-[9999] bg-black opacity-60
          w-screen h-screen transition-all ease-in-out delay-500 duration-300`}
