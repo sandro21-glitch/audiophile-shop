@@ -25,9 +25,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-5 static z-[9999]">
             <MobileNav isOpen={isOpen} setOpen={setOpen} />
-            <button>
+            <Link to="/">
               <img src={logo} alt="logo" />
-            </button>
+            </Link>
           </div>
           <ul className="gap-8 font-medium hidden lg:flex-center">
             <li className="text-[0.875rem] hover:text-orange-brown transition-colors ease-in duration-150 tracking-wider">
