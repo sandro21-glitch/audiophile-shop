@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../features/products/productsSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -11,10 +11,9 @@ import ProductFeatures from "../features/singleProduct/ProductFeatures";
 import Products from "../features/home/Products";
 import IntroductionSection from "../features/home/IntroductionSection";
 import SimilarProducts from "../features/singleProduct/SimilarProducts";
+import BackBtn from "../ui/BackBtn";
 
 const SingleProduct = () => {
-  const navigate = useNavigate();
-
   const { prodId } = useParams();
   const dispatch = useDispatch();
 
@@ -35,12 +34,7 @@ const SingleProduct = () => {
   return (
     <section className="section-center">
       <article className="py-20">
-        <button
-          onClick={() => navigate(-1)}
-          className="block mb-[3rem] hover:underline text-text"
-        >
-          Go Back
-        </button>
+        <BackBtn />
         {/* product info */}
         <ul className="flex flex-col">
           <li className="flex  items-center mb-[10rem]">
