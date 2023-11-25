@@ -5,7 +5,7 @@
 
 :root {
   --clr-grey-1: #102a42;
-  --clr-white: #fff;
+  --clr-white: #fafafa;
   --max-width: 72.375rem;
   --primary-p: rgba(255, 255, 255, 0.75);
 }
@@ -13,7 +13,7 @@ body {
   background: var(--clr-white);
   color: var(--clr-grey-1);
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 h1,
