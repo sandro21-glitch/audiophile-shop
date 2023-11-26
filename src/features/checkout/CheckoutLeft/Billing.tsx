@@ -9,11 +9,11 @@ const Billing = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <InputField label="Name" id="name1" placeholder="Alexei Ward" />
         <InputField
-          label="Email"
+          label="Email Address"
           id="email"
           placeholder="example@example.com"
         />
-        <InputField label="Phone" id="phone" placeholder="555-555-5555" />
+        <InputField label="Phone Number" id="phone" placeholder="555-555-5555" />
       </div>
     </fieldset>
   );
