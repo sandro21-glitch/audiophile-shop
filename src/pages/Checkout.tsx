@@ -6,8 +6,7 @@ const Checkout = () => {
   return (
     <section className="section-center">
       <BackBtn />
-      <article className="flex flex-col lg:flex-row">
-        
+      <article className="flex flex-col lg:flex-row gap-7">
         <CheckoutLeft />
         <Summary />
       </article>
