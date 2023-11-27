@@ -1,19 +1,30 @@
-const SumProduct = () => {
+import { formatPrice } from "../../../utils/formatPrice";
+
+type SumProduct = {
+  product: {
+    id: number;
+    shortName: string;
+    cartImage: string;
+    price: number;
+    amount: number;
+  };
+};
+const SumProduct = ({ product }: SumProduct) => {
   return (
-    <div className="flex items-center gap-5 mb-10">
+    <li className="flex items-center gap-5 mb-5">
       <img
-        src="https://audiophile-ecommerce-mbart13.vercel.app/images/cart/image-yx1-earphones.jpg"
-        alt=""
+        src={product.cartImage}
+        alt={product.shortName}
         className="w-[4rem] h-[4rem] rounded-lg"
       />
       <div className="w-full">
         <div className="w-full flex items-start justify-between">
-          <p className="text-black font-medium">YX1</p>
-          <p className="text-text font-medium">x1</p>
+          <p className="text-black font-medium">{product.shortName}</p>
+          <p className="text-text font-medium">{product.amount}</p>
         </div>
-        <p className="text-text font-medium">$ 599</p>
+        <p className="text-text font-medium">{formatPrice(product.price)}</p>
       </div>
-    </div>
+    </li>
   );
 };
 
