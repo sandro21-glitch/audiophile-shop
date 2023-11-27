@@ -1,12 +1,18 @@
+import { useAppSelector } from "../../hooks/reduxHooks";
 import SumProduct from "./summary/SumProduct";
 
 const Summary = () => {
+  const checkout = useAppSelector((store) => store.checkout.checkout);
   return (
     <section className="bg-white flex-1 p-10">
       <h2 className="uppercase text-[1.3rem] font-medium tracking-wider mb-5">
         Summary
       </h2>
-      <SumProduct />
+      <ul>
+        {checkout.map((product) => {
+          return <SumProduct key={product.id} product={product} />;
+        })}
+      </ul>
       <div className="flex justify-between">
         <dt className="uppercase text-text">TOTAL</dt>
         <dd className="font-semibold">$ 5,099</dd>
