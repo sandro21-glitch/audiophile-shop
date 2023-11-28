@@ -6,7 +6,7 @@ const Billing = () => {
       <legend className="uppercase text-orange-brown font-medium text-[.9rem] mb-3 tracking-wider">
         BILLING DETAILS
       </legend>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <InputField label="Name" id="name1" placeholder="Alexei Ward" />
         <InputField
           label="Email Address"
