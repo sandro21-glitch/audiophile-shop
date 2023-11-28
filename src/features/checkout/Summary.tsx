@@ -1,5 +1,9 @@
 import { useAppSelector } from "../../hooks/reduxHooks";
+import GrandTotal from "./summary/GrandTotal";
+import ShippingSum from "./summary/ShippingSum";
 import SumProduct from "./summary/SumProduct";
+import TotalPrice from "./summary/TotalPrice";
+import TotalVat from "./summary/TotalVat";
 
 const Summary = () => {
   const checkout = useAppSelector((store) => store.checkout.checkout);
@@ -13,22 +17,10 @@ const Summary = () => {
           return <SumProduct key={product.id} product={product} />;
         })}
       </ul>
-      <div className="flex justify-between">
-        <dt className="uppercase text-text">TOTAL</dt>
-        <dd className="font-semibold">$ 5,099</dd>
-      </div>
-      <div className="flex justify-between">
-        <dt className="uppercase text-text">shipping</dt>
-        <dd className="font-semibold">$ 50</dd>
-      </div>
-      <div className="flex justify-between">
-        <dt className="uppercase text-text">VAT (INCLUDED)</dt>
-        <dd className="font-semibold">$ 1,019.8</dd>
-      </div>
-      <div className="flex justify-between">
-        <dt className="uppercase text-text">GRAND TOTAL</dt>
-        <dd className="font-semibold">$ 6,168.8</dd>
-      </div>
+      <TotalPrice />
+      <ShippingSum />
+      <TotalVat />
+      <GrandTotal />
     </section>
   );
 };
