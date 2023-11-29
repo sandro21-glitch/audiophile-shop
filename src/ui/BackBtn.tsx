@@ -5,7 +5,7 @@ const BackBtn = () => {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="block mb-[3rem] hover:underline text-text"
+      className="block mt-[5rem] mb-[2rem] hover:underline text-text"
     >
       Go Back
     </button>
