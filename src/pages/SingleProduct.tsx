@@ -33,7 +33,7 @@ const SingleProduct = () => {
   }
   return (
     <section className="section-center">
-      <article className="py-20">
+      <article>
         <BackBtn />
         {/* product info */}
         <ul className="flex flex-col">
