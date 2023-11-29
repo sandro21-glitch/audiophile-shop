@@ -21,6 +21,9 @@ const Summary = () => {
       <ShippingSum />
       <TotalVat />
       <GrandTotal />
+      <button className="mt-10 w-full bg-orange-brown hover:bg-orange-brown-light py-3 text-white font-medium uppercase transition-colors ease-in duration-150">
+        Continue & Pay
+      </button>
     </section>
   );
 };
