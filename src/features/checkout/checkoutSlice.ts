@@ -27,7 +27,10 @@ export default checkoutSlice.reducer;
 
 export const totalSumPrice = (state: { checkout: CheckoutState }) => {
   const checkoutItems = state.checkout.checkout;
-  const totalAmount = checkoutItems.reduce((acc, item) => acc + item.price, 0);
+  const totalAmount = checkoutItems.reduce(
+    (acc, item) => acc + item.price * item.amount,
+    0
+  );
   return totalAmount;
 };
 // Function to calculate the total sum of VAT for all items in the cart
@@ -35,11 +38,12 @@ export const totalSumVat = (state: { checkout: CheckoutState }) => {
   const checkoutItems = state.checkout.checkout;
 
   const totalVat = checkoutItems.reduce((acc, item) => {
-    const vatExcludedPrice = item.price;
-    // Calculating the VAT amount based on a 20% VAT rate
+    const vatExcludedPrice = item.price * item.amount;
+    // calculating the VAT amount based on a 20% VAT rate
     const vatAmount = vatExcludedPrice * 0.2;
     return acc + vatAmount;
   }, 0);
+
   return totalVat;
 };
 export const grandTotalSum = (state: { checkout: CheckoutState }) => {
