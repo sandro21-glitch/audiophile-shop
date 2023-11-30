@@ -1,4 +1,6 @@
 import React from "react";
+import EmoneyPay from "./EmoneyPay";
+import CashPay from "./CashPay";
 
 type PaymentTypes = {
   payment: string;
@@ -49,6 +51,7 @@ const Payment = ({ payment, setPayment }: PaymentTypes) => {
           <PaymentOption id="cash" label="Cash on Delivery" />
         </div>
       </div>
+        {payment === "e-money" ? <EmoneyPay /> : <CashPay />}
     </fieldset>
   );
 };
