@@ -4,11 +4,11 @@ import toast from "react-hot-toast";
 const CartHeader = () => {
   const dispatch = useAppDispatch();
   const totalAmount = useAppSelector(totalCartAmount);
-
   const handleClearCart = () => {
     dispatch(clearCart());
     toast.success("Cart is empty");
   };
+
   return (
     <header className="flex justify-between w-full mb-10">
       <h6 className="text-black mb-0 uppercase font-medium text-[1.1rem]">
