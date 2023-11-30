@@ -20,7 +20,7 @@ const SumProduct = ({ product }: SumProduct) => {
       <div className="w-full">
         <div className="w-full flex items-start justify-between">
           <p className="text-black font-medium">{product.shortName}</p>
-          <p className="text-text font-medium">{product.amount}</p>
+          <p className="text-text font-medium">x{product.amount}</p>
         </div>
         <p className="text-text font-medium">{formatPrice(product.price)}</p>
       </div>
