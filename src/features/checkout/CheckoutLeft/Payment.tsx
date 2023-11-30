@@ -1,4 +1,3 @@
-import React from "react";
 import EmoneyPay from "./EmoneyPay";
 import CashPay from "./CashPay";
 
