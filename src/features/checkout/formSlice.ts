@@ -17,6 +17,10 @@ interface formTypes {
       emoney: boolean;
       cash: boolean;
     };
+    emoneyOptions: {
+      emoneyNumber: string;
+      pin: string;
+    };
   };
 }
 
@@ -37,15 +41,23 @@ const initialState: formTypes = {
       emoney: true,
       cash: false,
     },
+    emoneyOptions: {
+      emoneyNumber: "",
+      pin: "",
+    },
   },
 };
 
 export const formSlice = createSlice({
   name: "form",
   initialState,
-  reducers: {},
+  reducers: {
+    addFormState: (state, action) => {
+      state.form = action.payload;
+    },
+  },
 });
 
-// export const { addCartItems } = checkoutSlice.actions;
+export const { addFormState } = formSlice.actions;
 
 export default formSlice.reducer;
