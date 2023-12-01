@@ -14,6 +14,7 @@ const Summary = () => {
   useEffect(() => {
     dispatch(addCartItems(cart));
   }, [cart]);
+
   return (
     <section className="bg-white flex-1 p-10">
       <h2 className="uppercase text-[1.3rem] font-medium tracking-wider mb-5">
@@ -30,7 +31,10 @@ const Summary = () => {
       <ShippingSum />
       <TotalVat />
       <GrandTotal />
-      <button className="mt-10 w-full bg-orange-brown hover:bg-orange-brown-light py-3 text-white font-medium uppercase transition-colors ease-in duration-150">
+      <button
+        type="submit"
+        className="mt-10 w-full bg-orange-brown hover:bg-orange-brown-light py-3 text-white font-medium uppercase transition-colors ease-in duration-150"
+      >
         Continue & Pay
       </button>
     </section>
