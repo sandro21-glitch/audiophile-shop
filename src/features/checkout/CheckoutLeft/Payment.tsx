@@ -4,9 +4,21 @@ import CashPay from "./CashPay";
 type PaymentTypes = {
   payment: string;
   setPayment: (payment: string) => void;
+  emoneyOptions: { emoneyNumber: string; pin: string };
+  setEmoneyOptions: React.Dispatch<
+    React.SetStateAction<{
+      emoneyNumber: string;
+      pin: string;
+    }>
+  >;
 };
 
-const Payment = ({ payment, setPayment }: PaymentTypes) => {
+const Payment = ({
+  payment,
+  setPayment,
+  emoneyOptions,
+  setEmoneyOptions,
+}: PaymentTypes) => {
   return (
     <fieldset className="w-full mb-10">
       {/* Payment details legend */}
@@ -58,7 +70,14 @@ const Payment = ({ payment, setPayment }: PaymentTypes) => {
           </div>
         </div>
       </div>
-      {payment === "e-money" ? <EmoneyPay /> : <CashPay />}
+      {payment === "e-money" ? (
+        <EmoneyPay
+          emoneyOptions={emoneyOptions}
+          setEmoneyOptions={setEmoneyOptions}
+        />
+      ) : (
+        <CashPay />
+      )}
     </fieldset>
   );
 };
