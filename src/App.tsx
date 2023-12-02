@@ -15,6 +15,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import CartPopup from "./features/cart/CartPopup";
 import { Toaster } from "react-hot-toast";
 import Checkout from "./pages/Checkout";
+import OrderConfirmation from "./features/orderConfirmation/OrderConfirmation";
 
 function App() {
   const productData = getProductData();
@@ -26,7 +27,8 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
-      <CartPopup />
+      <CartPopup /> 
+      <OrderConfirmation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Hadphones />} />
