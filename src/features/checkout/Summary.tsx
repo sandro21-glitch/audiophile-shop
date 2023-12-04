@@ -5,7 +5,7 @@ import ShippingSum from "./summary/ShippingSum";
 import SumProduct from "./summary/SumProduct";
 import TotalPrice from "./summary/TotalPrice";
 import TotalVat from "./summary/TotalVat";
-import { addCartItems } from "./checkoutSlice";
+import { addCartItems, setCartPopup } from "./checkoutSlice";
 
 const Summary = () => {
   const dispatch = useAppDispatch();
@@ -32,8 +32,14 @@ const Summary = () => {
       <TotalVat />
       <GrandTotal />
       <button
-        type="submit"
-        className="mt-10 w-full bg-orange-brown hover:bg-orange-brown-light py-3 text-white font-medium uppercase transition-colors ease-in duration-150"
+        onClick={() => dispatch(setCartPopup(true))}
+        type="button"
+        disabled={checkout.length < 1}
+        className={`${
+          checkout.length < 1
+            ? "cursor-not-allowed opacity-40"
+            : "cursor-pointer opacity-100"
+        } mt-10 w-full bg-orange-brown hover:bg-orange-brown-light py-3 text-white font-medium uppercase transition-colors ease-in duration-150`}
       >
         Continue & Pay
       </button>
