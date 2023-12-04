@@ -1,8 +1,22 @@
+import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import OrderedProduct from "./OrderedProduct";
 import mark from "/images/shared/desktop/icon-check-mark.svg";
+import { setCartPopup } from "../checkout/checkoutSlice";
+import { clearCart } from "../cart/cartSlice";
 const OrderConfirmation = () => {
+  const complete = useAppSelector((store) => store.checkout.complete);
+  const dispatch = useAppDispatch();
+  const handleBackToHome = () => {
+    dispatch(setCartPopup(false));
+    dispatch(clearCart());
+  };
   return (
-    <div className="absolute px-5 left-0 top-0 w-screen h-screen z-[999999] flex justify-center items-center">
+    <div
+      className={`absolute px-5 left-0 top-0 w-screen h-screen z-[999999] ${
+        complete ? "flex" : "hidden"
+      } justify-center items-center`}
+    >
       <div className="fixed left-0 top-0 w-full h-full bg-black opacity-70 z-[-1]"></div>
       <article className=" bg-white p-10 w-[35rem] rounded-lg">
         <img src={mark} alt="mark" className="mb-7" />
@@ -13,6 +27,14 @@ const OrderConfirmation = () => {
           You will receive an email confirmation shortly.
         </p>
         <OrderedProduct />
+        <button
+          onClick={handleBackToHome}
+          className="mt-10 w-full py-3 bg-orange-brown  uppercase   hover:bg-orange-brown-light transition-colors ease-in duration-150"
+        >
+          <Link to="/" className="block  text-white font-medium text-[.9rem]">
+            Back To Home
+          </Link>
+        </button>
       </article>
     </div>
   );
