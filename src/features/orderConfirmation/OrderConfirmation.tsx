@@ -4,13 +4,24 @@ import OrderedProduct from "./OrderedProduct";
 import mark from "/images/shared/desktop/icon-check-mark.svg";
 import { setCartPopup } from "../checkout/checkoutSlice";
 import { clearCart } from "../cart/cartSlice";
+import { useEffect } from "react";
 const OrderConfirmation = () => {
   const complete = useAppSelector((store) => store.checkout.complete);
   const dispatch = useAppDispatch();
+  // Handle navigation back to home and cleanup
   const handleBackToHome = () => {
     dispatch(setCartPopup(false));
     dispatch(clearCart());
   };
+  // handle styling and scrolling based on completion state
+  useEffect(() => {
+    if (complete) {
+      document.body.style.overflow = "hidden";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [complete]);
   return (
     <div
       className={`absolute px-5 left-0 top-0 w-screen h-screen z-[999999] ${
@@ -27,14 +38,14 @@ const OrderConfirmation = () => {
           You will receive an email confirmation shortly.
         </p>
         <OrderedProduct />
-        <button
-          onClick={handleBackToHome}
-          className="mt-10 w-full py-3 bg-orange-brown  uppercase   hover:bg-orange-brown-light transition-colors ease-in duration-150"
-        >
-          <Link to="/" className="block  text-white font-medium text-[.9rem]">
+        <Link to="/" className="block text-white font-medium text-[.9rem]">
+          <button
+            onClick={handleBackToHome}
+            className="mt-10 w-full py-3 bg-orange-brown uppercase hover:bg-orange-brown-light transition-colors ease-in duration-150"
+          >
             Back To Home
-          </Link>
-        </button>
+          </button>
+        </Link>
       </article>
     </div>
   );
