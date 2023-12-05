@@ -43,7 +43,7 @@ const Navbar = () => {
               <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
-          <div className="relative  z-[9999]">
+          <div className="relative z-[9999]">
             <button onClick={() => dispatch(setOpenCart(true))}>
               <img src={cart} alt="cart" />
             </button>
