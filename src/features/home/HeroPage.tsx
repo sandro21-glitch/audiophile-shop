@@ -1,4 +1,6 @@
 import SeeProductBtn from "../../ui/SeeProductBtn";
+import { motion } from "framer-motion";
+
 const HeroPage = () => {
   return (
     <article className="w-full bg-primary-color px-5">
@@ -7,7 +9,11 @@ const HeroPage = () => {
         className="section-center relative overflow-hidden  flex lg:block justify-center items-center"
       >
         {/* left Side */}
-        <div className="relative z-[2] text-center lg:text-left">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2, delay: 2 } }}
+          className="relative z-[2] text-center lg:text-left"
+        >
           <h6 className="uppercase text-textLight tracking-[.5rem] font-semibold mb-5">
             NEW PRODUCT
           </h6>
@@ -26,15 +32,17 @@ const HeroPage = () => {
           >
             SEE PRODUCT
           </SeeProductBtn>
-        </div>
+        </motion.div>
         {/* right side */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2, delay: 1 } }}
           className="
             after:absolute after:bg-heroImgMobile lg:after:bg-heroImg
             after:z-[1] after:right-0 lg:after:right-[-5rem]
             after:top-0 after:w-full after:h-full after:bg-no-repeat
             after:bg-contain after:bg-center"
-        ></div>
+        ></motion.div>
       </div>
     </article>
   );
