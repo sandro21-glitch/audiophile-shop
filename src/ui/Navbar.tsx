@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [openCart]);
   return (
     <header className="w-full bg-primary-color py-10 relative after:absolute after:w-[72.375rem] after:mx-auto after:left-0 after:right-0 after:h-[1px] after:bg-divider after:bottom-0 ">
-      <MobileNavPop isOpen={isOpen} />
+      <MobileNavPop isOpen={isOpen} setOpen={setOpen} />
       <nav className="section-center text-text-white ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-5 static z-[9999]">
