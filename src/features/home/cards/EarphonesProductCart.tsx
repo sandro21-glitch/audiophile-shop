@@ -24,7 +24,7 @@ const EarphonesProductCart = () => {
             flex justify-center items-start flex-col"
       >
         <div className="py-7 px-7 ml-0 lg:ml-20">
-          <h2 className="  mb-7 text-[1.8rem] lg:text-[2rem] text-black font-medium">
+          <h2 className="  mb-7 text-[1.3rem] lg:text-[2rem] text-black font-medium">
             YX1 EARPHONES
           </h2>
           <SeeProductBtn
