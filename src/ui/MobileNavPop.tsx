@@ -3,9 +3,10 @@ import Products from "../features/home/Products";
 
 type NavProps = {
   isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const MobileNavPop = ({ isOpen }: NavProps) => {
+const MobileNavPop = ({ isOpen, setOpen }: NavProps) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowX = "hidden";
@@ -24,7 +25,7 @@ const MobileNavPop = ({ isOpen }: NavProps) => {
           isOpen ? "translate-y-0" : "-translate-y-[200%]"
         } rounded-b-3xl transition-all ease-linear duration-300 px-5`}
       >
-        <Products />
+        <Products setOpen={setOpen} />
       </div>
     </>
   );
