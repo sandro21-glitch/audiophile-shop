@@ -3,9 +3,14 @@ import headphones from "/assets/image-headphones.png";
 import speakers from "/assets/image-speakers.png";
 import earphones from "/assets/image-earphones.png";
 import arrowRight from "/assets/icon-arrow-right.svg";
+import { motion } from "framer-motion";
 const Products = () => {
   return (
-    <ul className="my-20 lg:my-28 flex items-center justify-between gap-7">
+    <motion.ul
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 2 } }}
+      className="my-20 lg:my-28 flex items-center justify-between gap-7"
+    >
       <li className="group pt-[5.5rem] pb-[1.5rem] cursor-pointer relative flex-1 bg-color-gray rounded-lg flex flex-col justify-center items-center">
         <Link
           to="/headphones"
@@ -69,7 +74,7 @@ const Products = () => {
           </div>
         </Link>
       </li>
-    </ul>
+    </motion.ul>
   );
 };
 
