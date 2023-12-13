@@ -1,5 +1,5 @@
 // import data from "./data/products.json";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
@@ -24,7 +24,7 @@ function App() {
     dispatch(setProductData(productData));
   }, []);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Navbar />
       <CartPopup /> 
@@ -58,7 +58,7 @@ function App() {
           },
         }}
       />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
