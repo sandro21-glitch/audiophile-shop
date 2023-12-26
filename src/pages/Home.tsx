@@ -5,14 +5,14 @@ import SingleProductLink from "../features/home/SingleProductLink";
 
 const Home = () => {
   return (
-    <section>
+    <main>
       <HeroPage />
       <div className="section-center">
         <Products />
         <SingleProductLink />
         <IntroductionSection />
       </div>
-    </section>
+    </main>
   );
 };
 
